@@ -20,6 +20,7 @@ class ViewController: UITableViewController {
             let label = UILabel()
             label.text = section.title
             label.tag = index + 1
+            label.textAlignment = NSTextAlignment.center
             
             let tap = UITapGestureRecognizer(target: self, action: #selector(labelTapped(sender:)))
             label.isUserInteractionEnabled = true
@@ -32,12 +33,13 @@ class ViewController: UITableViewController {
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        let margins = view.layoutMarginsGuide
         
         view.addSubview(stackView)
-        stackView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        stackView.topAnchor.constraint(equalTo: margins.topAnchor).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: margins.bottomAnchor).isActive = true
+        stackView.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
         
         self.tableView.tableHeaderView = view
     }
