@@ -4,10 +4,10 @@ class ViewController: UITableViewController {
 
     let folders = generateRandomData()
     let expenses = [
-        Section(title: "Section 1", items: ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"]),
-        Section(title: "Section 2", items: ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"]),
-        Section(title: "Section 3", items: ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"]),
-        Section(title: "Section 4", items: ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"])
+        Section(title: "Section 1", items: ["One", "Two", "Three"]),
+        Section(title: "Section 2", items: ["One", "Two", "Three"]),
+        Section(title: "Section 3", items: ["One"]),
+        Section(title: "Section 4", items: ["One", "Two", "Three", "Four", "Five"])
         
     ]
     var storedOffsets = [Int: CGFloat]()
